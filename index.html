@@ -205,8 +205,14 @@ footer{padding:1.75rem 5vw;border-top:.5px solid var(--rule);display:flex;justif
   .hero-cta-buttons{flex-direction:column}
   .strip{grid-template-columns:1fr}
   .strip-r{display:none}
-  .strip5{grid-template-columns:1fr 1fr;height:300px}
-  .s5-item:nth-child(n+3){display:none}
+  .strip5{display:flex;overflow-x:auto;height:260px;gap:2px;scroll-snap-type:x mandatory;padding-left:0}
+  .s5-item{flex:0 0 80vw;scroll-snap-align:start;min-width:80vw}
+  .s5-item:nth-child(1) img{object-position:center top!important}
+  .s5-item:nth-child(2) img{object-position:center 30%!important}
+  .s5-item:nth-child(3) img{object-position:center 20%!important}
+  .s5-item:nth-child(4) img{object-position:center 20%!important}
+  .s5-item:nth-child(5) img{object-position:center 50%!important}
+  .s5-item:nth-child(n+3){display:block}
   .quien-2col{grid-template-columns:1fr;gap:2rem}
   .quien-left{position:static}
   .modo-grid{grid-template-columns:1fr}
@@ -232,7 +238,7 @@ footer{padding:1.75rem 5vw;border-top:.5px solid var(--rule);display:flex;justif
 @media(max-width:480px){
   .hero-concept{font-size:clamp(3rem,16vw,5rem)}
   .strip5{grid-template-columns:1fr;height:250px}
-  .s5-item:nth-child(n+2){display:none}
+  .s5-item:nth-child(n+2){display:block}
   .nav-links{display:none}
 }
 </style>

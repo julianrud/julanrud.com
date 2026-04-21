@@ -229,7 +229,7 @@ footer{padding:1.75rem 5vw;border-top:.5px solid var(--rule);display:flex;justif
   .cont-2{grid-template-columns:1fr;gap:3rem}
   .spotify-row{grid-template-columns:1fr;gap:1rem}
   nav{padding:.6rem 5vw}
-  .nav-links{gap:1rem}
+  .nav-links{display:none!important}
   .nav-links a{font-size:.48rem}
   .sec{padding:4rem 6vw}
   .sec-title{font-size:clamp(2.5rem,12vw,4rem)}
@@ -239,11 +239,11 @@ footer{padding:1.75rem 5vw;border-top:.5px solid var(--rule);display:flex;justif
   .hero-concept{font-size:clamp(3rem,16vw,5rem)}
   .strip5{grid-template-columns:1fr;height:250px}
   .s5-item:nth-child(n+2){display:block}
-  .nav-links{display:none}
+  .nav-links{display:none!important}
 }
 
 @media(max-width:480px){
-  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;margin-left:auto}
+  .hamburger{display:flex!important;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;margin-left:auto}
   .hamburger span{display:block;width:22px;height:2px;background:var(--pink)}
   .mobile-menu{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(8,8,7,.98);z-index:9998;padding:1.5rem 6vw;flex-direction:column;gap:1.5rem;border-bottom:.5px solid var(--rule)}
   .mobile-menu.open{display:flex}
@@ -255,18 +255,6 @@ footer{padding:1.75rem 5vw;border-top:.5px solid var(--rule);display:flex;justif
   .mobile-menu{display:none}
 }
 
-@media(max-width:480px){
-  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem}
-  .hamburger span{display:block;width:22px;height:1.5px;background:var(--cream)}
-  .mobile-menu{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(8,8,7,.98);z-index:9998;padding:1.5rem 6vw;flex-direction:column;gap:1.5rem;border-bottom:.5px solid var(--rule)}
-  .mobile-menu.open{display:flex}
-  .mobile-menu a{font-family:var(--fm);font-size:.75rem;letter-spacing:.2em;color:var(--mid);text-decoration:none;text-transform:uppercase}
-  .mobile-menu a:hover{color:var(--pink)}
-}
-@media(min-width:481px){
-  .hamburger{display:none}
-  .mobile-menu{display:none}
-}
 </style>
 </head>
 <body>
@@ -284,9 +272,6 @@ footer{padding:1.75rem 5vw;border-top:.5px solid var(--rule);display:flex;justif
     <li><a href="#descarga">D3SCARGA</a></li>
     <li><a href="#contacto">CONTACTO</a></li>
   </ul>
-  <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
   <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
